@@ -1,0 +1,18 @@
+DATASET PROVENANCE & AUDIT SUMMARY
+==================================================
+Original Input Images:         6747
+Raw minus processed count:     1286
+Quarantine store files:        1170
+Final Machine-Ready Images:    5461
+Image Resolution:              Uniform 512 x 512 px
+Label Integrity:               Folder-derived mapping
+
+Counts by variety
+-----------------
+              variety  Final Cleaned (512x512)  Raw (Uncurated)
+            Amrapalli                     1218             1255
+Arka Neelachal Kesari                     1198             1213
+          Banganpalli                      592              739
+            Dashehari                      664              698
+         Suvarnarekha                     1016             1961
+             Totapuri                      773              881

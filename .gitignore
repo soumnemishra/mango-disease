@@ -1,0 +1,24 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local datasets and generated image caches
+data-sets-mango-leaf/
+cleaned-data-mango-leaf/
+processed-512/
+quarantine-dir/
+
+# Local generated analysis output
+# Keep reports and plots under version control for research provenance.
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp

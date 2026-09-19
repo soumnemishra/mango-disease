@@ -1,0 +1,436 @@
+Cleaned mango leaf dataset analysis
+=====================================
+
+Total image files: 5650
+Readable image files: 5650
+Unreadable image files: 0
+Varieties: 6
+Condition folders: 2
+Exact duplicate-content groups: 101
+
+Images by variety and condition
+-------------------------------
+Amrapalli / After Ripening: 344
+Amrapalli / Before Ripening: 882
+Arka Neelachal Kesari / After Ripening: 967
+Arka Neelachal Kesari / Before Ripening: 231
+Banganpalli / After Ripening: 306
+Banganpalli / Before Ripening: 426
+Dashehari / After Ripening: 306
+Dashehari / Before Ripening: 366
+Suvarnarekha / After Ripening: 675
+Suvarnarekha / Before Ripening: 341
+Totapuri / After Ripening: 153
+Totapuri / Before Ripening: 653
+
+Image totals by variety
+-----------------------
+Amrapalli: 1226
+Arka Neelachal Kesari: 1198
+Banganpalli: 732
+Dashehari: 672
+Suvarnarekha: 1016
+Totapuri: 806
+
+Image totals by extension
+-------------------------
+.jpg: 5650
+
+Readable image dimensions
+--------------------------
+Smallest width: 280 px
+Largest width: 4608 px
+Smallest height: 289 px
+Largest height: 4608 px
+Median resolution: 4608 x 2128 px
+Median file size: 2.46 MB
+
+Warnings
+--------
+None
+
+Exact duplicate-content groups
+------------------------------
+- Banganpalli/After Ripening/20250508_104701.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (24).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (25).jpg
+
+- Banganpalli/After Ripening/20250607_200847.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (130).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (131).jpg
+
+- Totapuri/Before Ripening/20250514_171310 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (77).jpg
+
+- Banganpalli/After Ripening/20250521_193729.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (76).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (77).jpg
+
+- Totapuri/Before Ripening/20250514_171327 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (84).jpg
+
+- Banganpalli/After Ripening/20250521_194153.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (96).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (97).jpg
+
+- Amrapalli/Before Ripening/20250514_173435(0).jpg
+- Dashehari/Before Ripening/20250514_173435(0) (1).jpg
+
+- Totapuri/Before Ripening/20250514_171323 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (81).jpg
+
+- Banganpalli/After Ripening/20250607_200813.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (106).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (107).jpg
+
+- Banganpalli/After Ripening/20250521_193733.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (80).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (81).jpg
+
+- Banganpalli/After Ripening/20250607_200901.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (138).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (141).jpg
+
+- Amrapalli/Before Ripening/20250514_173435.jpg
+- Dashehari/Before Ripening/20250514_173435 (1).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (20).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (21).jpg
+
+- Banganpalli/After Ripening/20250607_200821.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (108).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (109).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (10).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (11).jpg
+
+- Banganpalli/After Ripening/20250607_200837.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (118).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (121).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (2).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (3).jpg
+
+- Banganpalli/After Ripening/20250508_132413.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (28).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (29).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (4).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (5).jpg
+
+- Totapuri/Before Ripening/20250514_171425.jpg
+- Totapuri/Before Ripening/Totapuri 1 (90).jpg
+
+- Banganpalli/After Ripening/20250607_200849.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (134).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (135).jpg
+
+- Banganpalli/After Ripening/20250607_200811.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (104).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (105).jpg
+
+- Banganpalli/After Ripening/20250607_200834.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (114).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (115).jpg
+
+- Banganpalli/After Ripening/20250607_200850.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (136).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (137).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (16).jpg
+- Totapuri/After Ripening/Totapuri 1 (17).jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 10.27.24 PM (1).jpg
+
+- Totapuri/Before Ripening/20250514_171321 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (78).jpg
+
+- Banganpalli/After Ripening/20250607_200845.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (126).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (127).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (16).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (17).jpg
+
+- Banganpalli/After Ripening/20250607_200848.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (132).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (133).jpg
+
+- Banganpalli/After Ripening/20250607_200901(0).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (139).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (140).jpg
+
+- Banganpalli/After Ripening/20250607_200837(0).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (119).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (120).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (6).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (7).jpg
+
+- Banganpalli/After Ripening/20250521_193440 (1).jpg
+- Banganpalli/After Ripening/20250521_193440.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (34).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (35).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (36).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (37).jpg
+
+- Banganpalli/After Ripening/20250521_193442.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (38).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (39).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (13).jpg
+- Totapuri/After Ripening/Totapuri 1 (14).jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 10.27.23 PM.jpg
+
+- Banganpalli/After Ripening/20250521_193518.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (54).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (55).jpg
+
+- Amrapalli/Before Ripening/20250514_173444.jpg
+- Dashehari/Before Ripening/20250514_173444 (1).jpg
+
+- Banganpalli/After Ripening/20250521_194155.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (98).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (99).jpg
+
+- Amrapalli/Before Ripening/20250514_173445.jpg
+- Dashehari/Before Ripening/20250514_173445 (1).jpg
+
+- Banganpalli/After Ripening/20250521_194042.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (88).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (89).jpg
+
+- Banganpalli/After Ripening/20250521_194039.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (86).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (87).jpg
+
+- Banganpalli/After Ripening/20250521_193523.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (58).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (59).jpg
+
+- Banganpalli/After Ripening/20250521_193525.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (60).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (61).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (12).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (13).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (1).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (148).jpg
+
+- Banganpalli/After Ripening/20250607_200836.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (116).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (117).jpg
+
+- Totapuri/Before Ripening/20250514_171423.jpg
+- Totapuri/Before Ripening/Totapuri 1 (88).jpg
+
+- Banganpalli/After Ripening/20250521_193529.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (64).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (65).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (14).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (15).jpg
+
+- Banganpalli/After Ripening/20250607_200902.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (142).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (143).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (146).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (147).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (10).jpg
+- Totapuri/After Ripening/Totapuri 1 (9).jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 10.26.59 PM.jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 11.11.47 PM.jpg
+
+- Banganpalli/After Ripening/20250607_200832.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (112).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (113).jpg
+
+- Banganpalli/After Ripening/20250521_194151.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (94).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (95).jpg
+
+- Banganpalli/After Ripening/20250521_194045.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (90).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (91).jpg
+
+- Banganpalli/After Ripening/20250521_193726.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (72).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (73).jpg
+
+- Banganpalli/After Ripening/20250521_193520.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (56).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (57).jpg
+
+- Banganpalli/After Ripening/20250521_193514.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (52).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (53).jpg
+
+- Totapuri/Before Ripening/20250514_171322(0) (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (80).jpg
+
+- Amrapalli/Before Ripening/20250514_173452.jpg
+- Dashehari/Before Ripening/20250514_173452 (1).jpg
+
+- Banganpalli/After Ripening/20250521_193737.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (84).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (85).jpg
+
+- Banganpalli/After Ripening/20250508_132407.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (26).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (27).jpg
+
+- Banganpalli/After Ripening/20250607_200846.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (128).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (129).jpg
+
+- Banganpalli/After Ripening/20250607_200759.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (100).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (101).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (5).jpg
+- Totapuri/After Ripening/Totapuri 1 (6).jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-06-16 at 8.43.45 PM (6).jpg
+
+- Banganpalli/After Ripening/20250521_193527.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (62).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (63).jpg
+
+- Banganpalli/After Ripening/20250521_193506 (1).jpg
+- Banganpalli/After Ripening/20250521_193506.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (44).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (45).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (46).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (47).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (144).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (145).jpg
+
+- Banganpalli/After Ripening/20250607_200831.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (110).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (111).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (1).jpg
+- Totapuri/After Ripening/Totapuri 1 (2).jpg
+
+- Totapuri/Before Ripening/20250514_171413(0).jpg
+- Totapuri/Before Ripening/Totapuri 1 (86).jpg
+
+- Banganpalli/After Ripening/20250521_193724.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (70).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (71).jpg
+
+- Banganpalli/After Ripening/20250521_193457 (1).jpg
+- Banganpalli/After Ripening/20250521_193457.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (40).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (41).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (42).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (43).jpg
+
+- Banganpalli/After Ripening/20250607_200843.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (124).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (125).jpg
+
+- Totapuri/Before Ripening/20250514_171332 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (85).jpg
+
+- Totapuri/Before Ripening/20250514_171424.jpg
+- Totapuri/Before Ripening/Totapuri 1 (89).jpg
+
+- Banganpalli/After Ripening/20250521_193735.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (82).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (83).jpg
+
+- Totapuri/Before Ripening/20250514_171322 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (79).jpg
+
+- Banganpalli/After Ripening/20250607_200805.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (102).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (103).jpg
+
+- Amrapalli/Before Ripening/20250514_173511.jpg
+- Dashehari/Before Ripening/20250514_173511 (1).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (15).jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 10.27.24 PM.jpg
+
+- Amrapalli/Before Ripening/20250514_173446.jpg
+- Dashehari/Before Ripening/20250514_173446 (1).jpg
+
+- Banganpalli/After Ripening/20250521_193731.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (78).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (79).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (8).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (9).jpg
+
+- Banganpalli/After Ripening/20250508_104656.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (22).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (23).jpg
+
+- Banganpalli/After Ripening/20250607_200842.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (122).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (123).jpg
+
+- Banganpalli/After Ripening/20250521_193438 (1).jpg
+- Banganpalli/After Ripening/20250521_193438.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (30).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (31).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (32).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (33).jpg
+
+- Banganpalli/After Ripening/20250521_193510 (1).jpg
+- Banganpalli/After Ripening/20250521_193510.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (48).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (49).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (50).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (51).jpg
+
+- Amrapalli/Before Ripening/20250514_173454.jpg
+- Dashehari/Before Ripening/20250514_173454 (1).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (11).jpg
+- Totapuri/After Ripening/Totapuri 1 (12).jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 10.27.00 PM.jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 11.11.47 PM (1).jpg
+
+- Banganpalli/After Ripening/20250521_193727.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (74).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (75).jpg
+
+- Banganpalli/After Ripening/20250521_193532.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (66).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (67).jpg
+
+- Totapuri/Before Ripening/20250514_171325 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (82).jpg
+
+- Banganpalli/After Ripening/20250521_194148.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (92).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (93).jpg
+
+- Totapuri/Before Ripening/20250514_171326 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (83).jpg
+
+- Totapuri/Before Ripening/20250514_171413.jpg
+- Totapuri/Before Ripening/Totapuri 1 (87).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (7).jpg
+- Totapuri/After Ripening/Totapuri 1 (8).jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 10.26.58 PM (1).jpg
+- Totapuri/After Ripening/WhatsApp Image 2025-08-21 at 11.11.46 PM.jpg
+
+- Totapuri/Before Ripening/20250514_171309 (1).jpg
+- Totapuri/Before Ripening/Totapuri 1 (76).jpg
+
+- Banganpalli/After Ripening/Banganpalli 1 (18).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (19).jpg
+
+- Totapuri/After Ripening/Totapuri 1 (3).jpg
+- Totapuri/After Ripening/Totapuri 1 (4).jpg
+
+- Banganpalli/After Ripening/20250521_193534.jpg
+- Banganpalli/After Ripening/Banganpalli 1 (68).jpg
+- Banganpalli/After Ripening/Banganpalli 1 (69).jpg
+
