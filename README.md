@@ -148,15 +148,15 @@ Weighted-average F1: **0.9087**
 
 ### Analysis scripts
 
-- `analyze_dataset.py` performs a read-only scan of the original dataset. It reports folder counts, file extensions, image dimensions, unreadable images, naming inconsistencies, and possible duplicate-name groups.
-- `analyze_cleaned_dataset.py` analyzes the cleaned dataset. It validates images, records dimensions and file sizes, computes SHA-256 hashes, detects exact duplicate-content groups, and creates plots.
-- `audit_dataset_curation.py` compares the original `.jpg` inventory with the final `processed-512` cache and creates a provenance summary and comparison chart.
+- `data_prep/analyze_dataset.py` performs a read-only scan of the original dataset. It reports folder counts, file extensions, image dimensions, unreadable images, naming inconsistencies, and possible duplicate-name groups.
+- `data_prep/analyze_cleaned_dataset.py` analyzes the cleaned dataset. It validates images, records dimensions and file sizes, computes SHA-256 hashes, detects exact duplicate-content groups, and creates plots.
+- `data_prep/audit_dataset_curation.py` compares the original `.jpg` inventory with the final `processed-512` cache and creates a provenance summary and comparison chart.
 
 ### Curation and processing scripts
 
-- `clean_data.py` contains the earlier cleaning workflow used for dataset preparation.
-- `cleaned_up_.py` performs hash-based duplicate/conflict handling and generates the 512 x 512 processed cache.
-- `final_check.py` is an additional duplicate-name checking script. It can move files into quarantine and should be reviewed before execution.
+- `data_prep/clean_data.py` contains the earlier cleaning workflow used for dataset preparation.
+- `data_prep/cleaned_up_.py` performs hash-based duplicate/conflict handling and generates the 512 x 512 processed cache.
+- `data_prep/final_check.py` is an additional duplicate-name checking script. It can move files into quarantine and should be reviewed before execution.
 - `data_prep/split_dataset.py` creates the stratified train/validation/test split used by the training pipeline.
 
 ### Reports and visualizations
@@ -206,7 +206,7 @@ D:\mango-leaf-detection\.venv\Scripts\python.exe
 ### 1. Analyze the original dataset
 
 ```powershell
-.\.venv\Scripts\python.exe .\analyze_dataset.py
+.\.venv\Scripts\python.exe .\data_prep\analyze_dataset.py
 ```
 
 Default input:
@@ -225,7 +225,7 @@ analysis_reports/image_inventory.csv
 A different input or output location can be supplied:
 
 ```powershell
-.\.venv\Scripts\python.exe .\analyze_dataset.py `
+.\.venv\Scripts\python.exe .\data_prep\analyze_dataset.py `
     D:\path\to\dataset `
     --output D:\path\to\report
 ```
@@ -233,7 +233,7 @@ A different input or output location can be supplied:
 ### 2. Analyze the cleaned dataset and create plots
 
 ```powershell
-.\.venv\Scripts\python.exe .\analyze_cleaned_dataset.py
+.\.venv\Scripts\python.exe .\data_prep\analyze_cleaned_dataset.py
 ```
 
 Default outputs:
@@ -250,7 +250,7 @@ cleaned_analysis_reports/04_file_size_distribution.png
 ### 3. Run the curation audit
 
 ```powershell
-.\.venv\Scripts\python.exe .\audit_dataset_curation.py
+.\.venv\Scripts\python.exe .\data_prep\audit_dataset_curation.py
 ```
 
 Outputs:
@@ -305,7 +305,7 @@ The processed images should be treated as a machine-ready cache. The original an
 
 ## Important Execution Warning
 
-`cleaned_up_.py` contains file-moving and file-deletion operations in its duplicate-handling stage. Before running it on a new dataset, verify the input paths and make a backup. The resize stage is resumable, but rerunning the whole script also reruns the curation stage.
+`data_prep/cleaned_up_.py` contains file-moving and file-deletion operations in its duplicate-handling stage. Before running it on a new dataset, verify the input paths and make a backup. The resize stage is resumable, but rerunning the whole script also reruns the curation stage.
 
 For a future safer version, the curation stage should support a dry-run mode and write a manifest before moving or deleting files.
 
