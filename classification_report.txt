@@ -1,0 +1,12 @@
+                       precision    recall  f1-score   support
+
+            Amrapalli     0.8851    0.8415    0.8627       183
+Arka Neelachal Kesari     0.9605    0.9444    0.9524       180
+          Banganpalli     0.9318    0.9213    0.9266        89
+            Dashehari     0.8056    0.8788    0.8406        99
+         Suvarnarekha     0.9487    0.9673    0.9579       153
+             Totapuri     0.8889    0.8966    0.8927       116
+
+             accuracy                         0.9085       820
+            macro avg     0.9034    0.9083    0.9055       820
+         weighted avg     0.9095    0.9085    0.9087       820

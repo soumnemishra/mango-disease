@@ -9,6 +9,8 @@ data-sets-mango-leaf/
 cleaned-data-mango-leaf/
 processed-512/
 quarantine-dir/
+split_data/
+MODEL/model-weights/
 
 # Local generated analysis output
 # Keep reports and plots under version control for research provenance.

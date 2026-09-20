@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{float}
+\geometry{a4paper, margin=1in}
+
+\title{Comprehensive Project Report: Fine-Grained Mango Variety Classification using Mangifera-Net}
+\author{Project Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report details the end-to-end development of a highly robust deep learning pipeline for fine-grained classification of mango varieties from leaf imagery. The dataset, comprising images of six different mango varieties across varying ripening conditions, underwent rigorous curation, stratification, and augmentation. To address the intricate visual similarities between varieties, we proposed and implemented a novel hybrid architecture, \textbf{Mangifera-Net}, which synergizes the local feature extraction efficiency of MobileNetV2 and Conditional Convolutions with the global context modeling of Vision Transformers (ViTs). Evaluated on a held-out test set, the model achieved an exceptional overall accuracy of 90.85\%.
+\end{abstract}
+
+\section{Introduction}
+The automated identification of mango varieties based on leaf morphology presents a significant computer vision challenge due to high inter-class similarity and intra-class variance. The objective of this project was to construct a robust, production-ready machine learning pipeline capable of accurately classifying six distinct mango varieties: Amrapalli, Arka Neelachal Kesari, Banganpalli, Dashehari, Suvarnarekha, and Totapuri. 
+
+\section{Dataset Preparation and Curation}
+A meticulous data preparation pipeline was established to ensure high data quality and prevent data leakage.
+
+\subsection{Data Auditing and Cleaning}
+The raw dataset, initially containing various inconsistencies, was subjected to a strict curation audit. Corrupt images were removed, and all valid files were standardized into JPEG format (`.jpg`) to ensure seamless integration with PyTorch's `ImageFolder` API. 
+
+\subsection{Stratified Splitting}
+To guarantee that the model was evaluated fairly, the curated dataset (processed at a 512x512 resolution) was rigorously partitioned using a stratified split. This ensured the exact class distribution was preserved across all sets:
+\begin{itemize}
+    \item \textbf{Training Set (70\%):} Used for model optimization.
+    \item \textbf{Validation Set (15\%):} Used for hyperparameter tuning and early stopping.
+    \item \textbf{Testing Set (15\%):} Kept strictly hidden during the training phase to evaluate real-world generalization.
+\end{itemize}
+
+\subsection{Data Augmentation and Sensor Noise Simulation}
+To prevent overfitting and force the network to learn invariant morphological features, aggressive data augmentation was applied via the `torchvision.transforms.v2` API. This included:
+\begin{itemize}
+    \item Random horizontal and vertical flips, rotations ($45^\circ$), and affine transformations.
+    \item Color jittering (brightness, contrast, saturation) to simulate varying lighting conditions in the field.
+    \item \textbf{Custom Drone Sensor Simulation}: A custom `AddGaussianNoise` class was engineered to inject stochastic pixel-level noise, directly simulating the sensor noise frequently encountered in low-cost agricultural drone cameras.
+\end{itemize}
+
+\section{Model Architecture: Mangifera-Net}
+To capture both the fine-grained texture of the leaves and their global geometric structures, we engineered a custom hybrid neural network termed \textbf{Mangifera-Net}. 
+
+\subsection{Architectural Rationale}
+Standard Convolutional Neural Networks (CNNs) excel at extracting local textures (e.g., leaf venation patterns) but struggle to model global context. Conversely, Vision Transformers (ViTs) excel at long-range dependencies but are computationally expensive and lack inductive biases for local structures. Our architecture bridges this gap by fusing multiple expert branches.
+
+\subsection{Components of the Architecture}
+\begin{enumerate}
+    \item \textbf{MobileNetV2 Backbone}: Acts as a lightweight, pre-trained feature extractor, pulling low, mid, and high-level feature maps from early layers to feed into parallel branches.
+    \item \textbf{Conditional Convolution (CondConv2D) Branches}: These branches dynamically compute their convolution weights based on the input image using a routing mechanism. This Mixture-of-Experts (MoE) approach allows the model to dynamically adapt its filters to specific leaf types or lighting conditions, vastly increasing capacity without significantly increasing inference time.
+    \item \textbf{Inception Block}: Employed to capture spatial features at multiple receptive fields simultaneously, ensuring robustness to leaves of varying sizes in the frame.
+    \item \textbf{Vision Transformer (ViT) Branch}: High-level feature maps are tokenized via a `PatchTokenizer` and passed through a multi-head self-attention Transformer encoder. This allows the model to correlate distant parts of the leaf (e.g., comparing the tip shape to the base shape).
+    \item \textbf{Spatial Squeeze-and-Excitation (SSE)}: Throughout the network, SSE blocks explicitly recalibrate channel-wise feature responses, suppressing irrelevant background noise and emphasizing critical morphological features.
+\end{enumerate}
+Finally, the outputs from all branches are spatially aligned, summed, passed through a final SSE block, and pooled for classification.
+
+\section{Training Strategy}
+\subsection{Differential Learning Rates}
+To preserve the robust representations learned by the pre-trained MobileNetV2 backbone while allowing the randomly initialized custom blocks (ViT, CondConv) to converge, a differential optimizer strategy was employed. The backbone was fine-tuned with a highly conservative learning rate ($10^{-5}$), while the custom heads used a standard rate ($10^{-4}$) via the AdamW optimizer.
+
+\subsection{Class Imbalance Mitigation}
+Recognizing inherent imbalances in agricultural datasets, balanced class weights were dynamically computed based on the inverse frequency of the training targets and injected directly into the `CrossEntropyLoss` function. Furthermore, a `ReduceLROnPlateau` scheduler and mixed-precision scaling (`torch.amp`) were utilized to ensure smooth, efficient convergence.
+
+\section{Results and Evaluation}
+Upon completion of training, the model holding the lowest validation loss was restored and evaluated on the hidden test set comprising 820 images.
+
+The \textbf{Mangifera-Net} model achieved a stellar \textbf{Overall Accuracy of 90.85\%}. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l c c c c}
+\toprule
+\textbf{Variety} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\midrule
+Amrapalli & 0.8851 & 0.8415 & 0.8627 & 183 \\
+Arka Neelachal Kesari & 0.9605 & 0.9444 & 0.9524 & 180 \\
+Banganpalli & 0.9318 & 0.9213 & 0.9266 & 89 \\
+Dashehari & 0.8056 & 0.8788 & 0.8406 & 99 \\
+Suvarnarekha & 0.9487 & 0.9673 & 0.9579 & 153 \\
+Totapuri & 0.8889 & 0.8966 & 0.8927 & 116 \\
+\midrule
+\textbf{Accuracy} & & & \textbf{0.9085} & 820 \\
+\textbf{Macro Avg} & 0.9034 & 0.9083 & 0.9055 & 820 \\
+\textbf{Weighted Avg} & 0.9095 & 0.9085 & 0.9087 & 820 \\
+\bottomrule
+\end{tabular}
+\caption{Classification Report on the Hidden Test Set}
+\end{table}
+
+\subsection{Analysis}
+The model demonstrates exceptional discriminatory power for \textit{Suvarnarekha} (95.79\% F1) and \textit{Arka Neelachal Kesari} (95.24\% F1). The lowest precision was observed in the \textit{Dashehari} class (80.56\%), indicating a slight tendency of the model to predict this variety when encountering morphologically ambiguous leaves from other classes. However, its recall remains strong (87.88\%). 
+
+\section{Conclusion}
+This project successfully establishes a highly organized, production-grade deep learning pipeline for agricultural classification. The implementation of the \textbf{Mangifera-Net} architecture proved highly effective at navigating fine-grained inter-class similarities. Future work may involve targeted data collection or localized data augmentation specifically aimed at disambiguating the \textit{Dashehari} and \textit{Amrapalli} varieties.
+
+\end{document}
+

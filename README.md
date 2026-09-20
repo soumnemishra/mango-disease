@@ -18,12 +18,18 @@ Completed:
 - Raw-versus-processed dataset audit and visualization
 - Reproducible dependency list and GitHub documentation
 
-Not completed yet:
+Completed training and evaluation:
 
-- Train/validation/test split
-- Model selection and training
-- Hyperparameter tuning
-- Evaluation metrics and confusion matrix
+- Stratified train/validation/test split
+- Hybrid Mangifera-Net model implementation
+- Model training with class-weighted loss and differential learning rates
+- Held-out test-set evaluation
+- Classification report and confusion-matrix generation
+
+Remaining work:
+
+- Hyperparameter experiments and ablation studies
+- External validation on unseen field data
 - Final model export and deployment
 
 ## Dataset Organization
@@ -108,6 +114,36 @@ Final processed counts by variety:
 
 The class distribution is not perfectly balanced. Suvarnarekha has substantially more raw images than the other varieties, while the final processing stage removes many duplicate or conflicting files from that class. This imbalance should be considered when creating the training split and interpreting evaluation metrics.
 
+## Model Training and Evaluation
+
+The training pipeline is implemented in `train.py` and uses the locally generated `split_data/` directory. The split is stratified by mango variety with a 70% training, 15% validation, and 15% test allocation using `random_state=42`.
+
+The implemented `Mangifera-Net` architecture combines a MobileNetV2 backbone with custom convolutional and attention-based components. Training includes:
+
+- Class-weighted cross-entropy loss for class imbalance
+- AdamW optimization
+- Differential learning rates for backbone and custom parameters
+- ReduceLROnPlateau scheduling
+- Mixed precision when CUDA is available
+- Checkpoint saving and resume support
+
+The evaluation pipeline is implemented in `evaluate.py`. The current recorded held-out test result is **90.85% accuracy** on **820 test images**.
+
+Recorded metrics:
+
+| Variety | Precision | Recall | F1-score | Support |
+|---|---:|---:|---:|---:|
+| Amrapalli | 0.8851 | 0.8415 | 0.8627 | 183 |
+| Arka Neelachal Kesari | 0.9605 | 0.9444 | 0.9524 | 180 |
+| Banganpalli | 0.9318 | 0.9213 | 0.9266 | 89 |
+| Dashehari | 0.8056 | 0.8788 | 0.8406 | 99 |
+| Suvarnarekha | 0.9487 | 0.9673 | 0.9579 | 153 |
+| Totapuri | 0.8889 | 0.8966 | 0.8927 | 116 |
+
+Overall accuracy: **0.9085**
+Macro-average F1: **0.9055**
+Weighted-average F1: **0.9087**
+
 ## Repository Contents
 
 ### Analysis scripts
@@ -121,12 +157,16 @@ The class distribution is not perfectly balanced. Suvarnarekha has substantially
 - `clean_data.py` contains the earlier cleaning workflow used for dataset preparation.
 - `cleaned_up_.py` performs hash-based duplicate/conflict handling and generates the 512 x 512 processed cache.
 - `final_check.py` is an additional duplicate-name checking script. It can move files into quarantine and should be reviewed before execution.
+- `data_prep/split_dataset.py` creates the stratified train/validation/test split used by the training pipeline.
 
 ### Reports and visualizations
 
 - `analysis_reports/` contains the original inventory report and image inventory CSV.
 - `cleaned_analysis_reports/` contains cleaned-dataset reports, CSV metadata, and resolution/file-size plots.
 - `curation_audit/` contains the raw-versus-processed comparison chart, summary table, and audit text report.
+- `classification_report.txt` contains the held-out test metrics.
+- `confusion_matrix.png` contains the held-out test confusion matrix.
+- `project_report.tex` contains the formal LaTeX project report.
 
 The dataset folders, processed image cache, quarantine directory, virtual environment, and Python cache files are excluded through `.gitignore`. The GitHub repository contains code and analysis artifacts, not the image data.
 
@@ -223,6 +263,30 @@ curation_audit/dataset_curation_summary.csv
 
 The chart compares raw field-capture counts with the final 512 x 512 processed cache for each variety.
 
+### 4. Create the local data split
+
+```powershell
+.\.venv\Scripts\python.exe .\data_prep\split_dataset.py
+```
+
+This creates `split_data/` locally. The split contains image files and is intentionally excluded from GitHub.
+
+### 5. Train the model
+
+```powershell
+.\.venv\Scripts\python.exe .\train.py
+```
+
+Training checkpoints are written locally and are intentionally excluded from GitHub.
+
+### 6. Evaluate the trained model
+
+```powershell
+.\.venv\Scripts\python.exe .\evaluate.py
+```
+
+The evaluation script writes `classification_report.txt` and `confusion_matrix.png` in the project root.
+
 ## Curation Method
 
 The curation process uses the following logic:
@@ -249,12 +313,11 @@ For a future safer version, the curation stage should support a dry-run mode and
 
 1. Review the quarantined conflicts and decide whether any can be restored.
 2. Normalize condition folder names consistently.
-3. Create a stratified train/validation/test split by variety and ripening condition.
-4. Check for near-duplicate or visually identical images across splits.
-5. Establish a baseline model, such as transfer learning with a pretrained CNN.
-6. Track accuracy, precision, recall, F1 score, and per-class confusion matrices.
-7. Evaluate class imbalance and consider weighted loss or balanced sampling.
-8. Record the random seed, split manifest, model configuration, and experiment results.
+3. Check for near-duplicate or visually identical images across splits.
+4. Run ablation studies against a simpler CNN baseline.
+5. Evaluate the trained model on an independent external dataset.
+6. Export a deployment-ready model and document inference requirements.
+7. Record each experiment's random seed, configuration, and results.
 
 ## Reproducibility Notes
 
@@ -263,6 +326,7 @@ For a future safer version, the curation stage should support a dry-run mode and
 - The reports are snapshots of the dataset state at the time they were generated.
 - Re-running the curation process may change counts if the input folders have changed.
 - Dataset files are intentionally excluded from GitHub for size, privacy, and reproducibility-control reasons.
+- Model checkpoint files are intentionally excluded from GitHub because they are large binary artifacts; the architecture and training code remain version controlled.
 
 ## Version Control
 
@@ -276,5 +340,7 @@ The repository's `.gitignore` excludes:
 - `cleaned-data-mango-leaf/`
 - `processed-512/`
 - `quarantine-dir/`
+- `split_data/`
+- `MODEL/model-weights/`
 - `.venv/`
 - Python cache files
